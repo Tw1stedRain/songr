@@ -5,15 +5,14 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-@RequestMapping("/hello")
-
 public class HelloWorld {
 
 
-    @GetMapping("/{name}")
+    @GetMapping("/sayHello/{name}")
     @ResponseBody
-    public String helloWorld(String name) {
-        return "Hello, " + name + "!";
+    public String helloWorld(@PathVariable String name) {
+        String hello = "Hello, " + name + "!";
+        return hello;
     }
 
 
