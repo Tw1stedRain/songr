@@ -1,5 +1,6 @@
 package com.example.songr;
 
+import com.example.songr.controllers.HelloWorldController;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,7 +10,7 @@ public class HelloWorldTest {
 
     @Test
     public void testhelloWorld() {
-        HelloWorld hello = new HelloWorld();
+        HelloWorldController hello = new HelloWorldController();
 
         assertEquals("Hello, Bob!", hello.helloWorld("Bob"));
         assertEquals("Hello, Nicole!", hello.helloWorld("Nicole"));
@@ -18,7 +19,7 @@ public class HelloWorldTest {
 
     @Test
     public void testCaps() {
-        HelloWorld caps = new HelloWorld();
+        HelloWorldController caps = new HelloWorldController();
 
         String results = caps.capitalize("hello, user!");
         assertEquals("HELLO, USER!", results);

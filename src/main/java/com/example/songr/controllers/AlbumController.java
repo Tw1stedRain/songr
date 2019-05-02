@@ -1,7 +1,7 @@
 package com.example.songr.controllers;
 
 import com.example.songr.database.Album;
-import com.example.songr.AlbumNotFoundExecption;
+import com.example.songr.exceptions.AlbumNotFoundExecption;
 import com.example.songr.database.AlbumRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -74,6 +74,7 @@ public class AlbumController {
         throw new AlbumNotFoundExecption();
     }
 
+    // note to self: if doesn't work; stretch goal. ok
     @DeleteMapping("/album/{id}")
     public void deleteAlbum(
             @PathVariable Long id
